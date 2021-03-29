@@ -1,0 +1,6 @@
+2021-03-29 13:15:04.1782|INFO|BlogsConsole.Program|Program started
+2021-03-29 13:15:09.1200|ERROR|BlogsConsole.Program|Value cannot be null. (Parameter 'connectionString')
+2021-03-29 13:15:09.1486|INFO|BlogsConsole.Program|Program ended
+2021-03-29 13:16:33.1645|INFO|BlogsConsole.Program|Program started
+2021-03-29 13:16:39.0216|INFO|BlogsConsole.Program|Blog added - "Puppies"
+2021-03-29 13:16:39.2603|INFO|BlogsConsole.Program|Program ended
