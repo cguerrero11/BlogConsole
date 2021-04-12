@@ -108,7 +108,42 @@ namespace BlogsConsole
                     }
                     else if (choice == "4")
                     {
-                        //display posts
+                        var db = new BloggingContext();
+                        var query = db.Blogs.OrderBy(b => b.BlogId);
+                        foreach (var item in query)
+                        {
+                            Console.WriteLine($"{item.BlogId}) Posts from {item.Name}");
+                        }
+
+                        if (int.TryParse("0", out int BlogId))
+                        {
+                            IEnumerable<Post> Posts;
+                            if (BlogId != 0 && db.Blogs.Count(b => b.BlogId == BlogId) == 0)
+                            {
+                                logger.Error("No matching Blogs");
+                            }
+                            else
+                            {
+                                Posts = db.Posts.OrderBy(p => p.Title);
+                                if (BlogId == 0)
+                                {
+                                    Posts = db.Posts.OrderBy(p => p.Title);
+                                }
+                                else
+                                {
+                                    Posts = db.Posts.Where(p => p.BlogId == BlogId).OrderBy(p => p.Title);
+                                }
+                                Console.WriteLine($"{Posts.Count()} post(s) returned");
+                                foreach (var item in Posts)
+                                {
+                                    Console.WriteLine($"Blog: {item.Blog.Name}\nTitle: {item.Title}\nContent: {item.Content}\n");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            logger.Error("Invalid Blog Id");
+                        }
                     }
                     Console.WriteLine();
                 } while (choice.ToLower() != "q");
