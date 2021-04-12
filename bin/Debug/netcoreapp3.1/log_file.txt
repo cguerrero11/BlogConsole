@@ -4,3 +4,8 @@
 2021-03-29 13:16:33.1645|INFO|BlogsConsole.Program|Program started
 2021-03-29 13:16:39.0216|INFO|BlogsConsole.Program|Blog added - "Puppies"
 2021-03-29 13:16:39.2603|INFO|BlogsConsole.Program|Program ended
+2021-04-11 20:25:52.2516|INFO|BlogsConsole.Program|Program started
+2021-04-11 20:26:38.8815|INFO|BlogsConsole.Program|Post added - "Cool puppy"
+2021-04-11 20:27:51.6021|INFO|BlogsConsole.Program|Validation passed
+2021-04-11 20:27:51.6814|INFO|BlogsConsole.Program|Blog added - "Plants"
+2021-04-11 20:28:17.5077|INFO|BlogsConsole.Program|Post added - "Lily"
